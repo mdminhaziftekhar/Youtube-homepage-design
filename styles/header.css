@@ -3,6 +3,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 1;
 }
 
 .left-section{
@@ -59,11 +68,55 @@
     border-color: rgb(192, 192, 192);
     margin-left: -1px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-button, 
+.voice-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+    position: absolute;
+    background-color: rgb(93, 92, 92);
+    color: white;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    bottom: -40px;
+    opacity: 0;
+    transition: opacity 0.15;
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: roboto, Arial;
+    
+    
+}
+
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip{
+    opacity: 0.9;
 }
 
 .search-icon{
     height: 25px;
-    margin-top: 4px;
 }
 
 .voice-button{
@@ -72,11 +125,12 @@
     border-radius: 20px;
     border: none;
     background-color: rgb(245, 245, 245);
+    cursor: pointer;
 }
 
+
 .voice-icon{
-    height: 24px;
-    margin-top: 4px;   
+    height: 24px; 
 }
 
 .right-section{
@@ -90,17 +144,40 @@
 
 .upload-icon{
     height: 24px;
+    cursor: pointer;
 }
 
 .youtube-apps-icon{
     height: 24px;
+    cursor: pointer;
 }
 
 .notifications-icon{
     height: 24px;
+    cursor: pointer;
+}
+
+.notifications-icon-container{
+    position: relative;
+}
+
+.notifications-count{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: roboto,Arial;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
 }
 
 .current-user-picture{
     height: 32px;
     border-radius: 16px;
+    cursor: pointer;
 }
